@@ -8,15 +8,14 @@ public class SelectionSort {
 		}
 		
 		for(int i = 0; i < keys.length; i++) {
-			int min = keys[i];
 			int imin = i;
 			for(int j = i + 1; j < keys.length; j++) {
-				if(keys[j]<min) {
-					min = keys[j];
+				if(keys[j]<keys[imin]) {
 					imin = j;
 				}				
 			}	
-			if(keys[i] > min) {
+			if(keys[i] > keys[imin]) {
+				int min = keys[imin];
 				keys[imin] = keys[i];
 				keys[i] = min;
 			}								
